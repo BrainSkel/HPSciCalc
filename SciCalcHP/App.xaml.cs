@@ -1,6 +1,7 @@
 ﻿#if WINDOWS
 using Microsoft.UI;
 using Microsoft.UI.Windowing;
+using SciCalcHP.Views;
 using Windows.Graphics;
 #endif
 namespace SciCalcHP;
@@ -26,6 +27,6 @@ public partial class App : Application
 		});
 #endif
 
-        MainPage = new AppShell();
+        MainPage = new CalculatorPage();
 	}
 }
