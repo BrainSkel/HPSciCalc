@@ -4,7 +4,7 @@ namespace SciCalcHP.ViewModels
 	[INotifyPropertyChanged]
 	internal partial class CalculatorPageViewModel
 	{
-		public event PropertyChangedEventHandler PropertyChanged;
+		//public event PropertyChangedEventHandler PropertyChanged;
 
 		[ObservableProperty]
 		private string inputText = string.Empty;
@@ -13,9 +13,11 @@ namespace SciCalcHP.ViewModels
 		private string calculatedResult = "0";
 
 		private bool isSciOpWaiting = false;
-		public CalculatorPageViewModel() {
+		public CalculatorPageViewModel() 
+		{
 
 		}
+
 		[RelayCommand]
 		private void Reset()
 		{
@@ -40,7 +42,7 @@ namespace SciCalcHP.ViewModels
 
 			try
 			{
-				var inputString = NomralizeInputString();
+				var inputString = NormalizeInputString();
 			}
 			catch(Exception ) {
 				throw;
@@ -68,7 +70,8 @@ namespace SciCalcHP.ViewModels
 			};
 			var retString = InputText;
 
-			foreach (var key in _opMapper) {
+			foreach (var key in _opMapper.Keys) 
+			{
 				retString = retString.Replace(key, _opMapper[key]);
 			}
 
