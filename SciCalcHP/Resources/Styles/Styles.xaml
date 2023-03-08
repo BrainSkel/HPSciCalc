@@ -2,26 +2,14 @@
 <?xaml-comp compile="true" ?>
 <ResourceDictionary 
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:SciCalcHP"
-    x:Class="ScientificCalculator.Styles">
-    <Color x:Key="PageBackGround">#262626</Color>
-    <Color x:Key="DarkColor">#2F2F2F</Color>
-    <Color x:Key="LightColor">#9F9F9F</Color>
-    <Color x:Key="DarkTextColor">#151515</Color>
-    <Color x:Key="LightTextColor">#F5F5F5</Color>
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
-    <Color x:Key="PrimaryColor">#EFBB31</Color>
-    <Color x:Key="SecondaryColor">White</Color>
-    <Color x:Key="LightBorderColor">#16191E</Color>
-    <Color x:Key="BorderColor">#337777</Color>
 
-    
 
     <!--  Page Styles  -->
     <Style TargetType="ContentPage" ApplyToDerivedTypes="True">
         <Setter Property="NavigationPage.HasNavigationBar" Value="False"></Setter>
-        <Setter Property="BackgroundColor" Value="{StaticResource PageBackGround}"></Setter>
+        <Setter Property="BackgroundColor" Value="{StaticResource PageBackgroundColor}"></Setter>
     </Style>
 
 
