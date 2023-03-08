@@ -1,4 +1,6 @@
 ﻿
+using System.Linq.Expressions;
+
 namespace SciCalcHP.ViewModels
 {
     [INotifyPropertyChanged]
@@ -43,6 +45,10 @@ namespace SciCalcHP.ViewModels
             try
             {
                 var inputString = NormalizeInputString();
+                var expression = new Expression(inputString);
+                var result = expression.Eva;
+
+                CalculatedResult = result.ToString();
             }
             catch (Exception)
             {
