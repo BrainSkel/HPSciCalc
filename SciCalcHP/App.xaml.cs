@@ -1,8 +1,11 @@
 ﻿#if WINDOWS
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 using Microsoft.UI;
 using Microsoft.UI.Windowing;
 using SciCalcHP.Views;
 using Windows.Graphics;
+using System;
 #endif
 namespace SciCalcHP;
 

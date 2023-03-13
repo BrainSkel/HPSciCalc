@@ -1,5 +1,6 @@
 ﻿
 using System.Linq.Expressions;
+using Expression = NCalc.Expression;
 
 namespace SciCalcHP.ViewModels
 {
@@ -32,7 +33,7 @@ namespace SciCalcHP.ViewModels
         [RelayCommand]
         private void Calculate()
         {
-            if (inputText.Length == 00)
+            if (inputText.Length == 0)
             {
                 return;
             }
@@ -46,13 +47,13 @@ namespace SciCalcHP.ViewModels
             {
                 var inputString = NormalizeInputString();
                 var expression = new Expression(inputString);
-                var result = expression.Eva;
+                var result = expression.Evaluate();
 
                 CalculatedResult = result.ToString();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+               CalculatedResult = "NaN";
             }
         }
 
